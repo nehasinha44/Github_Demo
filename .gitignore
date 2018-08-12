@@ -1,0 +1,6 @@
+node_modules/
+src/assets/js/error
+build/
+Querytest
+task
+.history/

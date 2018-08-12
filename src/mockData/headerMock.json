@@ -1,0 +1,38 @@
+{
+    "navItem": {
+        "headerLeft": {
+            "0": {
+                "value": "Pull requests",
+                "url": "https://github.com/pulls"
+            },
+            "1": {
+                "value": "Issues",
+                "url": "https://github.com/issues"
+            },
+            "2": {
+                "value": "Marketplace",
+                "url": "https://github.com/marketplace"
+            },
+            "3":{
+                "value":"Explore",
+                "url":"https://github.com/explore"
+            }
+        },
+        "dropDownPlusIcon":{
+            "0":"New repository",
+            "1":"Import repository",
+            "2":"New gist",
+            "3":"New organization"
+        },
+        "dropDownLogVal":{
+            "0":"Signed in as",
+            "1":"Your profile",
+            "2":"Your star",
+            "3":"Your gists",
+            "4":"Help",
+            "5":"Settings",
+            "6":"Signout"
+
+        }
+}
+}

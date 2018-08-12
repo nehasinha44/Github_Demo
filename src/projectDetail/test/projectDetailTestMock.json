@@ -1,0 +1,69 @@
+{
+  "data": {
+    "user": {
+      "name": "nehasinha44",
+      "login": "nehasinha44",
+      "iconImage": "https://avatars0.githubusercontent.com/u/8937355?s=20&v=4",
+      "repository": {
+        "object": {
+          "entries": [
+            {
+              "name": ".eslintrc",
+              "type": "blob",
+              "mode": 33188
+            },
+            {
+              "name": ".gitignore",
+              "type": "blob",
+              "mode": 33188
+            },
+            {
+              "name": "README.md",
+              "type": "blob",
+              "mode": 33188
+            },
+            {
+              "name": "client",
+              "type": "tree",
+              "mode": 16384
+            },
+            {
+              "name": "components",
+              "type": "tree",
+              "mode": 16384
+            },
+            {
+              "name": "package.json",
+              "type": "blob",
+              "mode": 33188
+            },
+            {
+              "name": "server",
+              "type": "tree",
+              "mode": 16384
+            },
+            {
+              "name": "webpack.config.js",
+              "type": "blob",
+              "mode": 33188
+            }
+          ]
+        },
+        "name": "react-todo-list",
+        "id": "MDEwOlJlcG9zaXRvcnkxMTk4MjAyMDQ=",
+        "viewerHasStarred": true,
+        "viewerSubscription": "SUBSCRIBED",
+        "description": "A simple todo list app built with React, Redux and Webpack",
+        "descriptionHTML": "<div>A simple todo list app built with React, Redux and Webpack</div>",
+        "resourcePath": "/nehasinha44/react-todo-list",
+        "forkCount": 0,
+        "watchers": {
+          "totalCount": 1
+        },
+        "stargazers": {
+          "totalCount": 1
+        }
+      }
+    }
+  }
+}
