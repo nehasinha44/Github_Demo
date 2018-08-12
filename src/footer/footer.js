@@ -78,7 +78,10 @@ class App extends Component {
               </svg>
             </a>
 
-            <ul className="list-style-none d-flex flex-wrap footerul" pullRight>
+            <ul
+              className="list-style-none d-flex flex-wrap footerul"
+              pullright="true"
+            >
               <li className="mr-3">
                 <a
                   data-ga-click="Footer, go to contact, text:contact"

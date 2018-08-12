@@ -131,7 +131,7 @@ class App extends Component {
     ) {
       return this.state.ErrorValue === "" ||
         this.state.profile.repositories === undefined ? (
-        <h1>Loadering...</h1>
+        <h1>Loading...</h1>
       ) : (
         <h1>{this.state.ErrorValue}</h1>
       );

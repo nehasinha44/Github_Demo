@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     if (this.state.profile === "" && this.state.ErrorValue !== "") {
       return this.state.ErrorValue === "" ? (
-        <h1>Loadering...</h1>
+        <h1>Loading...</h1>
       ) : (
         <h1>{this.state.ErrorValue}</h1>
       );
