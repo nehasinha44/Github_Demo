@@ -26,7 +26,6 @@ And then you can go to [chrome://inspect](chrome://inspect) and inspect the serv
 # Features:
 * Profile Page 
 * Details Page
-* Files browse
 
 
 
