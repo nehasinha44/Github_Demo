@@ -27,5 +27,15 @@ And then you can go to [chrome://inspect](chrome://inspect) and inspect the serv
 * Profile Page 
 * Details Page
 
+#Screenshots
+![Screen1](https://github.com/nehasinha44/Github_Demo/blob/master/screenshots/Screen%20Shot%202018-08-12%20at%203.16.34%20PM.png?raw=true "Profile Page")
+
+
+![Screen2](https://github.com/nehasinha44/Github_Demo/blob/master/screenshots/Screen%20Shot%202018-08-12%20at%203.16.56%20PM.png?raw=true "Details Page")
+
+
+![Screen3](https://github.com/nehasinha44/Github_Demo/blob/master/screenshots/Screen%20Shot%202018-08-12%20at%203.17.46%20PM.png?raw=true "Repo List Page")
+
+
 
 
