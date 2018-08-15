@@ -48,6 +48,10 @@ export const QUERY_REPO_DATA = gql`
               name
               type
               mode
+              repository {
+                id
+                updatedAt
+              }
             }
           }
         }

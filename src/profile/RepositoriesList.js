@@ -1,15 +1,17 @@
 import React , { Component } from "react";
 import { Button, Col, Panel,Glyphicon} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class RepositoriesList extends Component {
     repositoriesList(val) {
+      const LoginUser = this.props.LoginUser;
         return val.map((item, index) => (
           <Col md={12} key={index}>
             <Panel style={{ height: "158px" }}>
               <Panel.Body>
-                <a href="hello">
+              <Link to={`${LoginUser}/${item.node.name}`}>
                   <h3>{item.node.name}</h3>
-                </a>
+                </Link>
                 <h5>{item.node.description}</h5>
                 <p>
                   {item.node.primaryLanguage != null

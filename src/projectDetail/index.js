@@ -82,10 +82,12 @@ class projectDetail extends Component {
     return data.map((item, index) => (
       <tr key={index}>
         <td>
-          <a href="">{item.name}</a>
+    {item.type === 'blob' ? <svg className="octicon octicon-file-directory" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fillRule="evenodd" d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>  : <svg className="octicon octicon-file" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fillRule="evenodd" d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"></path></svg>}
+     {"      "} {item.name}
+   
         </td>
         <td>{item.type}</td>
-        <td style={{ textAlign: "right" }}>{item.mode}</td>
+        <td style={{ textAlign: "right" }}>{item.repository.updatedAt}</td>
       </tr>
     ));
   }
@@ -150,9 +152,8 @@ class projectDetail extends Component {
         : this.state.repo.object.entries;
     var converter = new showdown.Converter();
 
-    if (this.state.readmecontain !== undefined) {
-      const readMe =
-        this.state.readmecontain.object !== undefined &&
+    if (this.state.readmecontain) {
+      const readMe = this.state.readmecontain.object !== undefined &&
         this.state.readmecontain.object !== null
           ? converter.makeHtml(this.state.readmecontain.object.text)
           : "Nothing To Show";
@@ -175,7 +176,7 @@ class projectDetail extends Component {
     } else this.state.readMeText = "Nothing To Show";
 
     if (repo === "") {
-      return <div className="profileDetailClass">Loading....</div>;
+      return <div className="profileDetailClass">Nothing To show</div>;
     }
 
     return (

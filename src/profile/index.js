@@ -84,7 +84,7 @@ class Profile extends Component {
             <RepositoriesData repositories={this.state.profile.repositories.edges} LoginUser={this.state.LoginUser} />
             </Tab>
             <Tab eventKey={2} title={TotalRepCount}>
-            <RepositoriesList repositories={this.state.profile.repositories.edges}/>
+            <RepositoriesList repositories={this.state.profile.repositories.edges} LoginUser={this.state.LoginUser}/>
             </Tab>
               <Tab eventKey={3} title="Stars" />
               <Tab eventKey={4} title={TotalFollowersCount} />
