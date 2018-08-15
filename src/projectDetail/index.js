@@ -12,7 +12,7 @@ import {
   Table,
   DropdownButton,
   MenuItem,
-  Jumbotron
+  Well
 } from "react-bootstrap";
 import client from "../config/graphqlConfig";
 import {
@@ -264,10 +264,10 @@ class projectDetail extends Component {
             </Tabs>
           </Col>
         </Row>
-        <Jumbotron>
+        <Well>
           {this.state.descriptionHTML}
           {this.state.readMeText}
-        </Jumbotron>
+        </Well>
       </Grid>
     );
   }
