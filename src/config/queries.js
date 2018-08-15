@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const ADD_STAR = gql`
+export const QUERY_ADD_STAR = gql`
   mutation AddStar($repositoryId: ID!) {
     addStar(input: { starrableId: $repositoryId }) {
       starrable {
@@ -11,7 +11,7 @@ export const ADD_STAR = gql`
   }
 `;
 
-export const REMOVE_STAR = gql`
+export const QUERY_REMOVE_STAR = gql`
   mutation RemoveStar($repositoryId: ID!) {
     removeStar(input: { starrableId: $repositoryId }) {
       starrable {
@@ -21,7 +21,7 @@ export const REMOVE_STAR = gql`
     }
   }
 `;
-export const WATCH_REPOSITORY = gql`
+export const QUERY_WATCH_REPOSITORY = gql`
   mutation($id: ID!, $viewerSubscription: SubscriptionState!) {
     updateSubscription(
       input: { state: $viewerSubscription, subscribableId: $id }
@@ -34,7 +34,7 @@ export const WATCH_REPOSITORY = gql`
   }
 `;
 
-export const REPO_VAL = gql`
+export const QUERY_REPO_DATA = gql`
   query($LoginUser: String!, $repositoryName: String!) {
     user(login: $LoginUser) {
       name
@@ -69,7 +69,7 @@ export const REPO_VAL = gql`
     }
   }
 `;
-export const PROFILE_QUERY = gql`
+export const QUERY_PROFILE= gql`
   query($LoginUser: String!) {
     user(login: $LoginUser) {
       name
@@ -141,7 +141,7 @@ export const PROFILE_QUERY = gql`
   }
 `;
 
-export const HEAD_QUERY = gql`
+export const QUERY_HEADER = gql`
   query($LoginUser: String!) {
     user(login: $LoginUser) {
       name
@@ -151,7 +151,7 @@ export const HEAD_QUERY = gql`
   }
 `;
 
-export const GET_README = gql`
+export const QUERY_GET_README = gql`
   query($LoginUser: String!, $repositoryName: String!) {
     repositoryOwner(login: $LoginUser) {
       repository(name: $repositoryName) {

@@ -7,6 +7,7 @@ import Profile from "./profile";
 import ProjectDetail from "./projectDetail";
 import Footer from "./footer/footer";
 
+
 ReactDOM.render(
   <Router>
     <div>

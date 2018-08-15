@@ -8,9 +8,10 @@ import NavbarForm from "./navbarForm";
 import NavItemLeft from "./navItemLeft";
 import hearderMock from "../mockData/headerMock";
 import NavbarItemRight from "./navbarItemRight";
-import { HEAD_QUERY } from "../config/queries";
+import { QUERY_HEADER } from "../config/queries";
 
-class App extends Component {
+
+class Header extends Component {
   constructor(props) {
     super(props);
     const {
@@ -29,7 +30,7 @@ class App extends Component {
     const LoginUser = this.state.LoginUser;
     client
       .query({
-        query: HEAD_QUERY,
+        query: QUERY_HEADER,
         variables: {
           LoginUser: LoginUser
         }
@@ -66,11 +67,11 @@ class App extends Component {
     );
   }
 }
-App.defaultProps = {
+Header.defaultProps = {
   match: ""
 };
-App.propTypes = {
+Header.propTypes = {
   match: PropTypes.object
 };
 
-export default App;
+export default Header;

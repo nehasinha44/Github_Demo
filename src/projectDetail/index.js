@@ -16,15 +16,15 @@ import {
 } from "react-bootstrap";
 import client from "../config/graphqlConfig";
 import {
-  ADD_STAR,
-  REMOVE_STAR,
-  WATCH_REPOSITORY,
-  REPO_VAL,
-  GET_README
+  QUERY_ADD_STAR,
+  QUERY_REMOVE_STAR,
+  QUERY_WATCH_REPOSITORY,
+  QUERY_REPO_DATA,
+  QUERY_GET_README
 } from "../config/queries";
 import showdown from "showdown";
 
-class App extends Component {
+class projectDetail extends Component {
   constructor(props) {
     super(props);
     const {
@@ -46,7 +46,7 @@ class App extends Component {
 
     client
       .query({
-        query: REPO_VAL,
+        query: QUERY_REPO_DATA,
         variables: {
           LoginUser: LoginUser,
           repositoryName: this.state.secondParam
@@ -63,7 +63,7 @@ class App extends Component {
           }),
         client
           .query({
-            query: GET_README,
+            query: QUERY_GET_README,
             variables: {
               LoginUser: LoginUser,
               repositoryName: this.state.secondParam
@@ -91,7 +91,7 @@ class App extends Component {
   }
   activeInactiveStar(repoid) {
     const mutationVal =
-      this.state.viewerHasStarred === false ? ADD_STAR : REMOVE_STAR;
+      this.state.viewerHasStarred === false ? QUERY_ADD_STAR : QUERY_REMOVE_STAR;
     client
       .mutate({
         mutation: mutationVal,
@@ -102,10 +102,10 @@ class App extends Component {
       .then(resp =>
         this.setState({
           totalStarCount:
-            mutationVal === REMOVE_STAR
+            mutationVal === QUERY_REMOVE_STAR
               ? this.state.totalStarCount - 1
               : this.state.totalStarCount + 1,
-          viewerHasStarred: mutationVal === REMOVE_STAR ? false : true
+          viewerHasStarred: mutationVal === QUERY_REMOVE_STAR ? false : true
         })
       )
       .catch(/*Exception handling*/);
@@ -117,7 +117,7 @@ class App extends Component {
         : "UNSUBSCRIBED";
     client
       .mutate({
-        mutation: WATCH_REPOSITORY,
+        mutation: QUERY_WATCH_REPOSITORY,
         variables: {
           id: repoid,
           viewerSubscription: sytatesView
@@ -272,4 +272,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default projectDetail;

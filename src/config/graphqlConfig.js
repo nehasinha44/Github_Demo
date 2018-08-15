@@ -2,9 +2,8 @@ import { ApolloClient } from "apollo-client";
 import { HttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import "isomorphic-unfetch";
 
-const token = "<ADD YOUR AUTH TOKEN HERE>";
+const token = "62d4a1d2416bd3eddf6ecab4c70d2d9043945dc2";
 const authLink = setContext((_, { headers }) => ({
   headers: {
     ...headers,
